@@ -1,0 +1,28 @@
+import math
+
+# Asks the user to input two points (x1, y1), (x2, y2)
+def main():
+  x1 = float(input("Enter x1: "))
+  y1 = float(input("Enter y1: "))
+  x2 = float(input("Enter x2: ")) 
+  y2 = float(input("Enter y2: "))
+  
+# This passes the variables down so the math logic can use them
+  calculate_distance(x1, y1, x2, y2)
+
+# Calculates and prints the distance between the two points using the Euclidean distance formula
+def calculate_distance(x1, y1, x2, y2 ):
+    distance = math.sqrt (pow (( x2 - x1 ), 2) + pow (( y2 - y1 ), 2)) 
+
+# Rounds up the distance to two decimal places
+    round_distance = round(distance, 2)
+
+# Outputs the distance between the two points
+    print("The distance between the two points is:", round_distance)
+    
+main()
+
+# Reflection:
+# The math library helped me simplify my program by providing me with built-in functions like pow() and sqrt().
+# The functions that were easier to use were input() and making variables, with that it also made math.sqrt easier for me
+# It would be more difficult because it would mean i would have to make my code from scratch
